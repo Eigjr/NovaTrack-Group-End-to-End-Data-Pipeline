@@ -14,7 +14,7 @@ This project demonstrates a robust, end-to-end data pipeline solution that downl
 ## Project Architecture
 A logical architecture was designed to visualize the flow of data through the pipeline.
 
-![alt text](image.png)
+![alt text](https://github.com/Eigjr/NovaTrack-Group-End-to-End-Data-Pipeline/blob/main/document/nova_architecture%20diagram.png?raw=true)
 
 ## Getting Started
 
