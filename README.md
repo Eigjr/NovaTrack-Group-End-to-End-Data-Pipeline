@@ -72,7 +72,8 @@ The project began with a Python script for the ETL process.
 
 Commands:
 # Activate environment
-python3 -m venv venv /activate venv
+python3 -m venv venv 
+source venv/bin/activate venv
 
 ### Run the ETL script
 ```
