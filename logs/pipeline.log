@@ -1,0 +1,57 @@
+ Amsterdam up-to-date
+ London up-to-date
+ New York up-to-date
+ Toronto up-to-date
+ Berlin up-to-date
+[0m14:38:04  Running with dbt=1.11.6
+[0m14:38:04  dbt version: 1.11.6
+[0m14:38:04  python version: 3.12.3
+[0m14:38:04  python path: /your/file_path
+[0m14:38:04  os info: Linux-6.14
+[0m14:38:05  Using profiles dir at /file/path/.dbt
+[0m14:38:05  Using profiles.yml file at /file/path/.dbt/profiles.yml
+[0m14:38:05  Using dbt_project.yml file at /home/file/path/novatrack/novatrack_dbt/dbt_project.yml
+[0m14:38:05  adapter type: postgres
+[0m14:38:05  adapter version: 1.10.0
+[0m14:38:05  Configuration:
+[0m14:38:05    profiles.yml file [[32mOK found and valid[0m]
+[0m14:38:05    dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:38:05  Required dependencies:
+[0m14:38:05   - git [[32mOK found[0m]
+
+[0m14:38:05  Connection:
+[0m14:38:05    host: localhost
+[0m14:38:05    port: 5432
+[0m14:38:05    user: postgres
+[0m14:38:05    database: postgres
+[0m14:38:05    schema: analytics
+[0m14:38:05    connect_timeout: 10
+[0m14:38:05    role: None
+[0m14:38:05    search_path: None
+[0m14:38:05    keepalives_idle: 0
+[0m14:38:05    sslmode: None
+[0m14:38:05    sslcert: None
+[0m14:38:05    sslkey: None
+[0m14:38:05    sslrootcert: None
+[0m14:38:05    application_name: dbt
+[0m14:38:05    retries: 1
+[0m14:38:05  Registered adapter: postgres=1.10.0
+[0m14:38:05    Connection test: [[32mOK connection ok[0m]
+
+[0m14:38:05  [32mAll checks passed![0m
+[0m14:38:10  Running with dbt=1.11.6
+[0m14:38:11  Registered adapter: postgres=1.10.0
+[0m14:38:12  Found 2 models, 2 data tests, 1 source, 464 macros
+[0m14:38:12  
+[0m14:38:12  Concurrency: 4 threads (target='dev')
+[0m14:38:12  
+[0m14:38:12  1 of 2 START sql view model analytics.stg_weather_daily ........................ [RUN]
+[0m14:38:12  1 of 2 OK created sql view model analytics.stg_weather_daily ................... [[32mCREATE VIEW[0m in 0.22s]
+[0m14:38:12  2 of 2 START sql table model analytics.fct_city_weather_daily .................. [RUN]
+[0m14:38:12  2 of 2 OK created sql table model analytics.fct_city_weather_daily ............. [[32mSELECT 5040[0m in 0.15s]
+[0m14:38:12  
+[0m14:38:12  Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.61 seconds (0.61s).
+[0m14:38:12  
+[0m14:38:12  [32mCompleted successfully[0m
+[0m14:38:12  
+[0m14:38:12  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
