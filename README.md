@@ -16,6 +16,7 @@ A logical architecture was designed to visualize the flow of data through the pi
 
 ![alt text](https://github.com/Eigjr/NovaTrack-Group-End-to-End-Data-Pipeline/blob/main/document/nova_architecture%20diagram.png?raw=true)
 
+
 ## Getting Started
 
 ### Prerequisites
@@ -73,10 +74,8 @@ The project began with a Python script for the ETL process.
 
 Commands:
 # Activate environment
-```
-python3 -m venv venv 
-source venv/bin/activate venv
-```
+python3 -m venv venv /activate venv
+
 ### Run the ETL script
 ```
 python 
@@ -111,6 +110,15 @@ Scheduling with Cron
 The bash script was scheduled to run daily at 12:00 AM using cron.
 
 ### Commands:
+```
+* * * * *
+│ │ │ │ │
+│ │ │ │ └── Day of week
+│ │ │ └──── Month
+│ │ └────── Day of month
+│ └──────── Hour
+└────────── Minute
+```
 
 ```
 # Open the crontab for editing
@@ -124,12 +132,16 @@ sudo service cron status
 ```
 
 ```
+.
 ├── .env
 ├── .gitignore
 ├── README.md
-├── run_novatrack_pipeline.sh
-├── cron_daily_run.sh
-├── requirements.txt
+├── logs
+│   ├──pipeline.log
+│
+├── Document
+│   ├──nova architecture diagram
+│
 ├── python_files/
 │   ├──ingest.py
 │   ├──load.py
@@ -139,8 +151,12 @@ sudo service cron status
 │   ├── dbt_project.yml
 │   ├── profiles.yml
 │   ├── models/
+│   
+├── run_pipeline.sh
+├── requirements.txt│ 
 └──
 ```
 
-# Conclusion
+#Conclusion
+
 This project provides a comprehensive blueprint for building a robust and automated data pipeline. dbt enforces data quality, making the process reliable and scalable.
