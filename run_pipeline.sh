@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # go to project directory
-cd /home/ema-i/Desktop/novatrack
+cd /home/file/path/novatrack
 
 # activate virtual environment
-source /home/ema-i/Desktop/novatrack/nova/bin/activate
+source /home/file/path/novatrack/nova/bin/activate
 
 # run ingestion
 python python_files/ingest.py
