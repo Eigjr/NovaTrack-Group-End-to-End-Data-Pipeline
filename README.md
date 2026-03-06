@@ -62,7 +62,6 @@ outputs:
     threads: 3
     type: postgres
     user: your_user
-<<<<<<< HEAD
 target: dev
 ```
 
