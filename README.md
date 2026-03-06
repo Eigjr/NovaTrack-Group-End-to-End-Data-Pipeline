@@ -157,6 +157,5 @@ sudo service cron status
 └──
 ```
 
-#Conclusion
-
+# Conclusion
 This project provides a comprehensive blueprint for building a robust and automated data pipeline. dbt enforces data quality, making the process reliable and scalable.
