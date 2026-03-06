@@ -14,11 +14,7 @@ This project demonstrates a robust, end-to-end data pipeline solution that downl
 ## Project Architecture
 A logical architecture was designed to visualize the flow of data through the pipeline.
 
-<<<<<<< HEAD
-![alt text](image.png/nova_architecture_diagram.png)
-=======
 ![alt text](https://github.com/Eigjr/NovaTrack-Group-End-to-End-Data-Pipeline/blob/main/document/nova_architecture%20diagram.png?raw=true)
->>>>>>> da7ceb5c7cfd33091e163877bcac2fd264d3e384
 
 ## Getting Started
 
@@ -126,7 +122,6 @@ sudo service cron status
 ```
 
 ```
-.
 ├── .env
 ├── .gitignore
 ├── README.md
@@ -142,14 +137,8 @@ sudo service cron status
 │   ├── dbt_project.yml
 │   ├── profiles.yml
 │   ├── models/
-│   
-│ 
-└── ...
+└──
 ```
 
-#Conclusion
-
+# Conclusion
 This project provides a comprehensive blueprint for building a robust and automated data pipeline. dbt enforces data quality, making the process reliable and scalable.
-=======
-target: dev```
->>>>>>> da7ceb5c7cfd33091e163877bcac2fd264d3e384
