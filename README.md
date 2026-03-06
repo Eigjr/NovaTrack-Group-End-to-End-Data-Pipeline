@@ -14,7 +14,7 @@ This project demonstrates a robust, end-to-end data pipeline solution that downl
 ## Project Architecture
 A logical architecture was designed to visualize the flow of data through the pipeline.
 
-![alt text](image.png)
+![alt text](image.png/nova_architecture_diagram.png)
 
 ## Getting Started
 
@@ -62,4 +62,86 @@ outputs:
     threads: 3
     type: postgres
     user: your_user
-target: dev```
+target: dev
+```
+
+# Local Pipeline Development
+- ## Python ETL Scripting
+
+The project began with a Python script for the ETL process.
+
+Commands:
+# Activate environment
+python3 -m venv venv /activate venv
+
+### Run the ETL script
+```
+python 
+ingest.py
+load.py
+location.py
+```
+
+# dbt Transformation
+
+## After the data was loaded, dbt was used for transformation.
+
+### Commands:
+
+```
+dbt
+Navigate to the dbt project folder
+cd novatravk_dbt
+
+Debug the dbt connection
+dbt debug
+
+Run and test the models
+dbt build
+```
+
+# Automating the Pipeline Locally
+
+A bash script was created to automate the ETL and dbt process. It dynamically handles execution based on the environment (WSL or Git Bash) and logs all output to a file.
+Scheduling with Cron
+
+The bash script was scheduled to run daily at 12:00 AM using cron.
+
+### Commands:
+
+```
+# Open the crontab for editing
+crontab -e
+
+# Add the schedule entry
+0 0 * * * /path/to/your/project/run_etl_pipeline.sh 
+
+# Check the cron service status
+sudo service cron status
+```
+
+```
+.
+├── .env
+├── .gitignore
+├── README.md
+├── run_novatrack_pipeline.sh
+├── cron_daily_run.sh
+├── requirements.txt
+├── python_files/
+│   ├──ingest.py
+│   ├──load.py
+│   ├──location.py
+│ 
+├── novatract_dbt/
+│   ├── dbt_project.yml
+│   ├── profiles.yml
+│   ├── models/
+│   
+│ 
+└── ...
+```
+
+#Conclusion
+
+This project provides a comprehensive blueprint for building a robust and automated data pipeline. dbt enforces data quality, making the process reliable and scalable.
